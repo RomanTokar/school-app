@@ -1,0 +1,18 @@
+{
+  "name": "school-app",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/web-app",
+    "apps/server"
+  ],
+  "engines": {
+    "node": ">=18.12.0 <19.0.0",
+    "pnpm": ">=7.20.0"
+  },
+  "scripts": {
+    "dev": "pnpm -r --stream --if-present run start",
+    "formatFE": "cd ./app/web-app && prettier . --write"
+  },
+  "license": "ISC"
+}

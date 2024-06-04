@@ -1,0 +1,78 @@
+@import "../../../variables.scss";
+
+.notice {
+  background-color: #2a2b30;
+  border-radius: $border-radius-lg;
+  padding: 15px 20px;
+  position: absolute;
+  right: 16px;
+  top: 110%;
+  width: 290px;
+  overflow: hidden;
+  z-index: 1001;
+
+  &Btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  &Btn {
+    padding: 16px 20px;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    line-height: 20px;
+    color: $font-color-base;
+    border-radius: $border-radius-sm;
+    background-color: transparent;
+    height: auto;
+    border: none;
+
+    &Active,
+    &:hover {
+      background-color: $font-color-base;
+      color: $font-color-menu;
+    }
+  }
+
+  &List {
+    max-height: 300px;
+    overflow: scroll;
+  }
+
+  &Time {
+    font-size: $font-size-xxs;
+    color: $font-color-secondary;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  &Item {
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &Top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      text-align: right;
+      color: $font-color-base;
+    }
+
+    &Btns {
+      margin-top: 16px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

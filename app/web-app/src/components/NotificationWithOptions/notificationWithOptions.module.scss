@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.popover {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+
+  &Inner {
+    background-color: $bg-secondary;
+    padding: 30px 20px;
+    backdrop-filter: blur(150px);
+    border-radius: $border-radius-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column-reverse;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+    }
+
+    &Action {
+      gap: 20px;
+    }
+  }
+
+  &Image {
+    max-width: 24px;
+  }
+
+  &Text {
+    color: $font-color-base;
+    font-weight: 700;
+    line-height: 19px;
+  }
+
+  &Btns {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}

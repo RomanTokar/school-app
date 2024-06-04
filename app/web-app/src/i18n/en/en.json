@@ -1,0 +1,384 @@
+{
+  "general": {
+    "from": "From",
+    "to": "To",
+    "actions": {
+      "cancel": "Cancel",
+      "apply": "Apply",
+      "remove": "Remove",
+      "delete": "Delete",
+      "update": "Update"
+    },
+    "modal": {
+      "updateType": "Select update type",
+      "deleteType": "Select delete type",
+      "single": "Single",
+      "all": "All",
+      "following": "following"
+    }
+  },
+  "components": {
+    "classesTable": {
+      "title": "Reschedule class",
+      "goingDeleteClassNotification": "You are about to remove class",
+      "form": {
+        "classNamePlaceholder": "Class name",
+        "locationPlaceholder": "Location",
+        "cityPlaceholder": "Choose city",
+        "matnasPlaceholder": "Choose matnas",
+        "groupLinkPlaceholder": "Group Link",
+        "teacherIdPlaceholder": "Choose teacher",
+        "datePlaceholder": "Choose date",
+        "submit": "Reschedule"
+      }
+    },
+    "header": {
+      "menu": {
+        "classes": "Classes",
+        "students": "Students",
+        "teachers": "Teachers",
+        "dashboard": "Dashboard"
+      },
+      "actions": {
+        "logOut": "Log out",
+        "today": "Today",
+        "all": "All",
+        "decline": "Decline",
+        "accept": "Accept"
+      }
+    },
+    "teacherItem": {
+      "goingDeleteNotification": "You are about to remove Teacher name",
+      "deletedNotification": "Teacher has been removed",
+      "classes": "classes"
+    },
+    "teacherStudent": {
+      "text": {
+        "student": "Student",
+        "name": "Name",
+        "id": "ID",
+        "phone": "Phone",
+        "email": "E-mail",
+        "whatsapp": "WhatsApp"
+      }
+    },
+    "studentPresence": {
+      "label": "Arrived"
+    },
+    "studentAttendancy": {
+      "attendancy": "Attendancy",
+      "to": "To",
+      "from": "From",
+      "arrived": "Arrived",
+      "notArrive": "Didn't arrive"
+    },
+    "teacherNotes": {
+      "text": {
+        "note": "Note",
+        "notes": "Notes"
+      },
+      "form": {
+        "textareaPlaceholder": "Text of notification will be here"
+      },
+      "actions": {
+        "addNote": "Add note"
+      },
+      "notifications": {
+        "noteAdded": "Note has been added"
+      },
+      "validation": {
+        "note": "Note should be at least 5 characters long"
+      }
+    },
+    "files": {
+      "text": {
+        "files": "files"
+      },
+      "validation": {
+        "file": "File is required",
+        "name": "Name is required",
+        "notes": "Notes is required"
+      },
+      "notifications": {
+        "fileAdded": "File has been added"
+      },
+      "actions": {
+        "chooseFile": "Choose file",
+        "addNote": "Add note",
+        "addFile": "Add file"
+      },
+      "form": {
+        "fileNamePlaceholder": "File name",
+        "yourNotesPlaceholder": "Your notes"
+      }
+    },
+    "teacherPlans": {
+      "text": {
+        "plan": "Plan for today",
+        "numberOfStudents": "Number of students",
+        "numberOfClasses": "Number of classes"
+      }
+    },
+    "reminds": {
+      "notifications": {
+        "remindAdded": "Remind has been added",
+        "remindRemoved": "Remind has been removed"
+      },
+      "modal": {
+        "time": "Time",
+        "date": "Date",
+        "chooseTime": "Choose time",
+        "textPlaceholder": "Text of new remind will be here"
+      },
+      "actions": {
+        "addRemind": "Add remind"
+      },
+      "text": {
+        "remindsToday": "Reminds for today"
+      }
+    },
+    "teacherStudentsList": {
+      "text": {
+        "students": "Students"
+      }
+    },
+    "teacherClasses": {
+      "text": {
+        "classes": "Classes"
+      },
+      "actions": {
+        "cancelAll": "Cancel all classes"
+      }
+    },
+    "teacherWhatsapp": {
+      "text": {
+        "chat": "Chat",
+        "enterChat": "Enter group chat"
+      }
+    },
+    "classesPlans": {
+      "title": "This class students",
+      "studentsCount": "Number of students"
+    },
+    "classesNotes": {
+      "text": {
+        "notes": "Notes for class"
+      },
+      "form": {
+        "textarea": "Text of notification will be here"
+      },
+      "actions": {
+        "addNote": "Add note"
+      },
+      "notifications": {
+        "noteAdded": "Note has been added"
+      }
+    }
+  },
+  "loginPage": {
+    "title": "Log in",
+    "forgotPassword": "Forgot password?",
+    "form": {
+      "phonePlaceholder": "Phone/E-mail",
+      "passwordPlaceholder": "Password",
+      "submit": "Log in"
+    }
+  },
+  "dashboardPage": {
+    "time": "Time",
+    "date": "Date",
+    "chooseTime": "Choose time",
+    "newRemindPlaceholder": "Text of new remind will be here",
+    "myStats": "My statistics",
+    "progressBar": {
+      "arrived": "Arrived to class",
+      "didntArrived": "Didnt arrive to class",
+      "notReported": "Were not reported on"
+    },
+    "planner": {
+      "title": "Plans for today",
+      "classes": "Classes",
+      "teachers": "Teachers"
+    },
+    "actions": {
+      "addRemind": "Add remind"
+    },
+    "noData": "No info for this period"
+  },
+  "classesPage": {
+    "text": {
+      "thisWeekClasses": "This week classes",
+      "addClass": "Add class"
+    },
+    "form": {
+      "classNamePlaceholder": "Class name",
+      "locationPlaceholder": "Location",
+      "cityPlaceholder": "Choose city",
+      "matnasPlaceholder": "Choose matnas",
+      "groupLinkPlaceholder": "Group Link",
+      "teacherIdPlaceholder": "Choose teacher",
+      "datePlaceholder": "Choose date",
+      "submit": "Add class",
+      "cancel": "Cancel"
+    },
+    "actions": {
+      "manageClasses": "Manage classes",
+      "finishManage": "Finish Managing",
+      "addClass": "Add class"
+    },
+    "validations": {
+      "classLength": "Class name should be at least 5 characters long",
+      "locationLength": "Location should be at least 5 characters long",
+      "groupLinkRequired": "Group link is required",
+      "dateRequired": "Date is required",
+      "teacherRequired": "Teacher is required",
+      "matnasRequired": "Matnas is required",
+      "cityRequired": "City is required"
+    }
+  },
+  "studentsPage": {
+    "filters": {
+      "matnas": "Matnas",
+      "matnasPlaceholder": "Choose matnas",
+      "school": "School",
+      "schoolPlaceholder": "Choose school",
+      "city": "City",
+      "cityPlaceholder": "Choose city",
+      "searchPlaceholder": "Enter name"
+    },
+    "buttons": {
+      "addStudent": "Add student",
+      "deleteStudent": "Delete student",
+      "allStudents": "All students",
+      "changePhoto": "Change photo"
+    },
+    "form": {
+      "fullNamePlaceholder": "Full name",
+      "cityPlaceholder": "City",
+      "schoolPlaceholder": "School",
+      "matnasPlaceholder": "Matnas",
+      "idPlaceholder": "ID",
+      "phoneNumberPlaceholder": "Phone number",
+      "emailPlaceholder": "E-mail",
+      "whatsAppLinkPlaceholder": "WhatsAppLink",
+      "submit": "Add student"
+    },
+    "notification": {
+      "studentAdded": "Student has been added"
+    },
+    "validations": {
+      "cityRequired": "City is required",
+      "fullNameRequired": "Full name is required",
+      "schoolRequired": "School is required",
+      "matnasRequired": "Matnas is required",
+      "IDRequired": "ID is required",
+      "emailRequired": "Email is required",
+      "phoneRequired": "Phone number  is required"
+    }
+  },
+  "studentsItem": {
+    "notification": {
+      "studentRemoved": "Student has been removed",
+      "goingDeleteStudentNotification": "You are about to remove"
+    }
+  },
+  "studentDetail": {
+    "notification": {
+      "studentUpdated": "Student has been updated"
+    },
+    "modal": {
+      "title": "Add note",
+      "newNotePlaceholder": "Text of note will be here",
+      "submit": "Add note"
+    },
+    "block": {
+      "notes": "Notes",
+      "attendancy": "Attendancy",
+      "student": "Student",
+      "files": "Files"
+    },
+    "buttons": {
+      "changePhoto": "Change photo",
+      "addNote": "Add note",
+      "backButton": "Back to students"
+    },
+    "form": {
+      "fullNamePlaceholder": "Full name",
+      "cityPlaceholder": "City",
+      "schoolPlaceholder": "School",
+      "matnasPlaceholder": "Matnas",
+      "idPlaceholder": "ID",
+      "phoneNumberPlaceholder": "Phone number",
+      "emailPlaceholder": "E-mail",
+      "whatsAppLinkPlaceholder": "WhatsAppLink",
+      "submit": "Apply",
+      "cancel": "Cancel",
+      "fullNameField": "Name",
+      "cityField": "City",
+      "schoolField": "School",
+      "matnasField": "Matnas",
+      "idField": "ID",
+      "phoneNumberField": "Phone",
+      "emailField": "E-mail",
+      "whatsAppLinkField": "WhatsApp"
+    },
+    "validations": {
+      "cityRequired": "City is required",
+      "fullNameRequired": "Full name is required",
+      "schoolRequired": "School is required",
+      "matnasRequired": "Matnas is required",
+      "IDRequired": "ID is required",
+      "emailRequired": "Email is required",
+      "phoneRequired": "Phone number  is required"
+    },
+    "filters": {
+      "searchPlaceholder": "Enter class name",
+      "classes": "classes"
+    }
+  },
+  "studentClassItem": {
+    "additionalInformation": "Additional information",
+    "chooseAnotherTeacher": "Choose another teacher",
+    "arrived": "Arrived",
+    "notification": {
+      "classRemoved": "Class has been removed",
+      "goingDeleteClassNotification": "You are about to remove"
+    }
+  },
+  "teachersPage": {
+    "form": {
+      "searchPlaceholder": "Enter name",
+      "fullNamePlaceholder": "Full name",
+      "phoneNumberPlaceholder": "Phone number",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordPlaceholder": "Confirm password"
+    },
+    "actions": {
+      "addTeacher": "Add teacher",
+      "addPhoto": "Add photo"
+    },
+    "text": {
+      "allTeachers": "All teachers",
+      "classes": "classes"
+    },
+    "validations": {
+      "photo": "Please add photo",
+      "passwordMatch": "Passwords did not match"
+    },
+    "notifications": {
+      "teacherAdded": "Teacher has been added"
+    }
+  },
+  "classesDashboardPage": {
+    "text": {
+      "back": "Back to classes"
+    },
+    "form": {
+      "nameLabel": "Name",
+      "locationLabel": "Location",
+      "timeLabel": "Time",
+      "groupChatLabel": "Group chat"
+    }
+  }
+}

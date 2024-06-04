@@ -1,0 +1,10 @@
+@import "../../../variables.scss";
+
+.wrapper {
+  padding: 30px 28px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

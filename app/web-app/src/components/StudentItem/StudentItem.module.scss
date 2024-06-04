@@ -1,0 +1,75 @@
+@import "../../variables.scss";
+
+.student {
+  background-color: $bg-secondary;
+  border: 1px solid $border-color;
+  padding: 15px 22px;
+  backdrop-filter: blur(150px);
+  border-radius: $border-radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
+
+  button {
+    border: 1px solid $btn-secondary;
+    align-self: flex-start;
+  }
+
+  &Name {
+    font-size: $font-size-sm;
+    color: $font-color-base;
+    line-height: 20px;
+    text-align: end;
+    width: 100%;
+  }
+
+  &Classes {
+    color: $font-color-secondary;
+    font-size: $font-size-sm;
+    line-height: 20px;
+
+    &Wrap {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 10px;
+      flex-direction: column-reverse;
+      align-self: flex-end;
+      gap: 7px;
+
+      div {
+        display: flex;
+      }
+      @media (min-width: $desktop) {
+        gap: 16px;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.icon {
+  max-width: 24px;
+  margin-right: 4px;
+  &Block {
+    display: flex;
+    align-items: center;
+    &Top {
+      gap: 5px;
+      @media (min-width: $desktop) {
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.info {
+  &Block {
+    align-self: flex-end;
+  }
+}

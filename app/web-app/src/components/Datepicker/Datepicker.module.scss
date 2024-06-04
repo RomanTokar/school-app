@@ -1,0 +1,7 @@
+@import "../../variables.scss";
+
+.datepicker {
+  & button.mantine-DatePickerInput-input {
+    background: $bg-popup;
+  }
+}

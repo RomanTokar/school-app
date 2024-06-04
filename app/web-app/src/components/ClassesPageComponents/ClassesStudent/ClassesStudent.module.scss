@@ -1,0 +1,47 @@
+@import "../../../variables.scss";
+
+.blockWrapper {
+  padding: 30px 20px;
+  border-radius: $border-radius-lg;
+  border: 1px solid $border-color;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.title {
+  color: $font-color-base;
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.student {
+  &Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+    width: 100%;
+
+    &Row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Label {
+      font-size: $font-size-sm;
+    }
+
+    &Value {
+      font-size: $font-size-sm;
+      color: $font-color-secondary;
+    }
+  }
+}

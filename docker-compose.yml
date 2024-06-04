@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  nginx:
+    container_name: nginx-proxy
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/www/letsencrypt/:/var/www/letsencrypt/
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./app/server
+    ports:
+      - "4000:4000"
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./app/web-app
+    ports:
+      - "3000:3000"

@@ -1,0 +1,82 @@
+@import "../../variables.scss";
+
+.teacher {
+  &Search {
+    max-width: 100%;
+    margin-left: auto;
+
+    @media (min-width: $desktop) {
+      max-width: 300px;
+    }
+  }
+
+  &Btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  &Title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $font-color-base;
+  }
+
+  &List {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.modal {
+  padding: 50px 10px;
+  max-width: 440px;
+
+  &Header {
+    text-transform: uppercase;
+    color: $font-color-base;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &Btns {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.dropzone {
+  max-width: 100%;
+  &Uploaded {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  &FileName {
+    word-break: break-all;
+    padding-right: 10px;
+    color: $font-color-base;
+  }
+}

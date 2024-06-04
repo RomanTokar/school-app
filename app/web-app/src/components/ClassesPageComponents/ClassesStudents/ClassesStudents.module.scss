@@ -1,0 +1,99 @@
+@import "../../../variables.scss";
+
+.students {
+  background-color: $bg-secondary;
+  padding: 50px 10px;
+  border-radius: $border-radius-lg;
+  margin-top: 20px;
+
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+    margin-top: 0;
+  }
+
+  &Action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  &List {
+    border: 1px solid $border-color;
+    border-radius: $border-radius-lg;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &Item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+
+    &Selected {
+      border-bottom: 1px solid $primary;
+      color: $primary;
+    }
+
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &Avatar {
+    margin-left: 10px;
+    & img {
+      max-width: 40px;
+      max-height: 40px;
+      border-radius: $border-radius-full;
+      overflow: hidden;
+    }
+  }
+
+  &Name {
+    margin-left: auto;
+  }
+}
+
+.close {
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  color: $font-color-base;
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.modal {
+  padding: 50px 10px;
+
+  &Header {
+    text-transform: uppercase;
+    color: $font-color-base;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  &Datepicker {
+    margin-top: 10px;
+  }
+
+  &Actions {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

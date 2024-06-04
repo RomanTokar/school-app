@@ -1,0 +1,65 @@
+@import "../../variables.scss";
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  width: 290px;
+  height: 390px;
+  background-color: #2a2b30;
+  border-radius: $border-radius-lg;
+  backdrop-filter: blur(300px);
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $desktop) {
+    width: 384px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &:before {
+    content: "";
+    bottom: 0;
+    left: 0;
+    background: url("../../assets//images/decor.svg") no-repeat;
+    width: 270px;
+    height: 150px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &Title {
+    text-transform: uppercase;
+    text-align: right;
+    font-weight: 700;
+    color: $font-color-base;
+    line-height: 19px;
+  }
+
+  &Form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &Controls {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &Forgot {
+    font-size: $font-size-sm;
+    color: $font-color-base;
+  }
+}

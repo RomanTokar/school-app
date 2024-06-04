@@ -1,0 +1,137 @@
+@import "../../variables.scss";
+
+.students {
+  &Search {
+    max-width: 100%;
+    margin-left: auto;
+
+    @media (min-width: $desktop) {
+      max-width: 300px;
+    }
+  }
+
+  &Btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  &Title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $font-color-base;
+  }
+
+  &List {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+.filters {
+  &Wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    flex-direction: column-reverse;
+    gap: 7px;
+    div {
+      display: flex;
+    }
+    @media (min-width: $desktop) {
+      gap: 16px;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    color: $font-color-base;
+
+    & > div {
+      margin-left: 10px;
+    }
+  }
+}
+
+.modal {
+  padding: 50px 10px;
+
+  &Header {
+    text-transform: uppercase;
+    color: $font-color-base;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &Btns {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: $primary;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &Wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &ChangeButton {
+    margin-bottom: 5px;
+    &:hover {
+      color: $font-color-secondary;
+    }
+  }
+
+  &DeleteButton:hover {
+    color: $font-color-error;
+  }
+}
+
+.overlayContent {
+  text-align: center;
+  color: white;
+}

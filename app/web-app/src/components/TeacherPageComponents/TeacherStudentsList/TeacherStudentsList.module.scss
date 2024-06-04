@@ -1,0 +1,53 @@
+@import "../../../variables.scss";
+
+.students {
+  background: $bg-secondary;
+  padding: 50px 10px;
+  border-radius: $border-radius-lg;
+  margin-top: 20px;
+
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+    margin-top: 0;
+  }
+
+  &List {
+    margin-top: 20px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-lg;
+    padding: 20px;
+    max-height: 880px;
+    overflow-y: auto;
+  }
+
+  &Item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &Selected {
+      border-bottom: 1px solid $primary;
+      color: $primary;
+    }
+  }
+}
+
+.title {
+  color: $font-color-base;
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}

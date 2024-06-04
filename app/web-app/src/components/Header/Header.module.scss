@@ -1,0 +1,87 @@
+@import "../../variables.scss";
+
+.header {
+  background-color: transparent;
+  border-bottom: none;
+  padding-top: 40px;
+  margin-bottom: 40px;
+
+  &Inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      backdrop-filter: blur(300px);
+      background-color: $bg-secondary;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: $border-radius-lg;
+      width: auto;
+    }
+
+    &Wrapper {
+      height: 100vh;
+
+      @media (min-width: $desktop) {
+        height: auto;
+      }
+    }
+
+    &Item {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: $font-size-3xl;
+      color: $font-color-base;
+      font-weight: 700;
+      border-radius: $border-radius-sm;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      cursor: pointer;
+      text-decoration: none;
+
+      @media (min-width: $desktop) {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: $font-size-sm;
+        width: auto;
+      }
+
+      &Active {
+        color: $font-color-menu;
+        background-color: $font-color-base;
+        text-decoration: none;
+      }
+    }
+
+    &Logout {
+      border: 1px solid $border-color;
+      padding: 16px 30px;
+      height: auto;
+      border-radius: $border-radius-sm;
+      font-size: $font-size-sm;
+      font-weight: 700;
+      color: $font-color-base;
+      line-height: 20px;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

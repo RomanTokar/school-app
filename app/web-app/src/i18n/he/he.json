@@ -1,0 +1,377 @@
+{
+  "general": {
+    "from": "מ...",
+    "to": "עד...",
+    "actions": {
+      "cancel": "ביטול",
+      "apply": "החל",
+      "remove": "הסר",
+      "delete": "מחק",
+      "update": "עדכון"
+    },
+    "modal": {
+      "updateType": "בחר סוג עדכון",
+      "deleteType": "בחר סוג מחיקה",
+      "single": "יחיד",
+      "all": "את כל",
+      "following": "הבא"
+    }
+  },
+  "components": {
+    "classesTable": {
+      "title": "קבע שיעור מחדש",
+      "goingDeleteClassNotification": "למחוק את הכיתה?",
+      "form": {
+        "classNamePlaceholder": "שם הכיתה",
+        "locationPlaceholder": "מיקום",
+        "cityPlaceholder": "עיר",
+        "matnasPlaceholder": "מתנס",
+        "groupLinkPlaceholder": "לינק לוואטסאפ",
+        "teacherIdPlaceholder": "בחר מדריך",
+        "datePlaceholder": "תאריך",
+        "submit": "קביעה מחדש"
+      }
+    },
+    "header": {
+      "menu": {
+        "classes": "כיתות",
+        "students": "תלמידים",
+        "teachers": "מדריכים",
+        "dashboard": "לוח בקרה"
+      },
+      "actions": {
+        "logOut": "התנתק",
+        "today": "היום",
+        "all": "הכל",
+        "decline": "סירוב",
+        "accept": "אישור"
+      }
+    },
+    "teacherItem": {
+      "goingDeleteNotification": "למחוק מורה?",
+      "deletedNotification": "המורה נמחק",
+      "classes": "שיעורים"
+    },
+    "teacherStudent": {
+      "text": {
+        "student": "סטוּדֶנט",
+        "name": "שֵׁם",
+        "id": "תְעוּדַת זֶהוּת",
+        "phone": "טלפון",
+        "email": "אימייל",
+        "whatsapp": "וואטסאפ"
+      }
+    },
+    "studentPresence": {
+      "label": "הגיע"
+    },
+    "studentAttendancy": {
+      "attendancy": "נוכחות",
+      "to": "ל",
+      "from": "מ",
+      "arrived": "הגיע",
+      "notArrive": "לא הגיע"
+    },
+    "teacherNotes": {
+      "text": {
+        "note": "הערה",
+        "notes": "הערות"
+      },
+      "form": {
+        "textareaPlaceholder": "טקסט ההודעה יהיה כאן"
+      },
+      "actions": {
+        "addNote": "להוסיף הערה"
+      },
+      "notifications": {
+        "noteAdded": "הערה נוספה"
+      },
+      "validation": {
+        "note": "הערה צריכה להיות באורך של לפחות 5 תווים"
+      }
+    },
+    "files": {
+      "text": {
+        "files": "קבצים"
+      },
+      "validation": {
+        "file": "נדרש קובץ",
+        "name": "נדרש שם",
+        "notes": "יש צורך בהערות"
+      },
+      "notifications": {
+        "fileAdded": "הקובץ נוסף"
+      },
+      "actions": {
+        "chooseFile": "בחר קובץ",
+        "addNote": "להוסיף הערה",
+        "addFile": "הוסף קובץ"
+      },
+      "form": {
+        "fileNamePlaceholder": "שם קובץ",
+        "yourNotesPlaceholder": "ההערות שלך"
+      }
+    },
+    "teacherPlans": {
+      "text": {
+        "plan": "תכנן להיום",
+        "numberOfStudents": "מספר תלמידים",
+        "numberOfClasses": "מספר כיתות"
+      }
+    },
+    "reminds": {
+      "notifications": {
+        "remindAdded": "התזכורת נוספה",
+        "remindRemoved": "התזכורת הוסרה"
+      },
+      "modal": {
+        "time": "זְמַן",
+        "date": "תַאֲרִיך",
+        "chooseTime": "בחר זמן",
+        "textPlaceholder": "טקסט של תזכורת חדשה יהיה כאן"
+      },
+      "actions": {
+        "addRemind": "הוסף תזכורת"
+      },
+      "text": {
+        "remindsToday": "מזכיר להיום"
+      }
+    },
+    "teacherStudentsList": {
+      "text": {
+        "students": "סטודנטים"
+      }
+    },
+    "teacherClasses": {
+      "text": {
+        "classes": "שיעורים"
+      },
+      "actions": {
+        "cancelAll": "בטל את כל השיעורים"
+      }
+    },
+    "teacherWhatsapp": {
+      "text": {
+        "chat": "לְשׂוֹחֵחַ",
+        "enterChat": "היכנס לצ'אט קבוצתי"
+      }
+    },
+    "classesPlans": {
+      "title": "תלמידי הכיתה הזו",
+      "studentsCount": "מספר תלמידים"
+    },
+    "classesNotes": {
+      "text": {
+        "notes": "הערות לכיתה"
+      },
+      "form": {
+        "textarea": "טקסט ההודעה יהיה כאן"
+      },
+      "actions": {
+        "addNote": "להוסיף הערה"
+      },
+      "notifications": {
+        "noteAdded": "הערה נוספה"
+      }
+    }
+  },
+  "loginPage": {
+    "title": "התחברות",
+    "forgotPassword": "שכחת סיסמה?",
+    "form": {
+      "phonePlaceholder": "טלפון/אימייל",
+      "passwordPlaceholder": "סיסמה",
+      "submit": "התחבר"
+    }
+  },
+  "dashboardPage": {
+    "time": "זמן",
+    "date": "תאריך",
+    "chooseTime": "בחר זמן",
+    "newRemindPlaceholder": "כאן תהיה תזכורת",
+    "myStats": "הסטטיסטיקה שלי",
+    "progressBar": {
+      "arrived": "הגיע",
+      "didntArrived": "לא הגיע",
+      "notReported": "לא דווח"
+    },
+    "planner": {
+      "title": "תכניות להיום",
+      "classes": "שיעורים",
+      "teachers": "מדריכים"
+    },
+    "actions": {
+      "addRemind": "הוספת תזכורת"
+    },
+    "noData": ""
+  },
+  "classesPage": {
+    "text": {
+      "thisWeekClasses": "כיתות לשבוע הזה",
+      "addClass": "הוסף כיתות"
+    },
+    "form": {
+      "classNamePlaceholder": "שם כיתה",
+      "locationPlaceholder": "מיקום",
+      "cityPlaceholder": "עיר",
+      "matnasPlaceholder": "מתנס",
+      "groupLinkPlaceholder": "לינק וואטסאפ",
+      "teacherIdPlaceholder": "מדריך",
+      "datePlaceholder": "תאריך",
+      "submit": "כיתה",
+      "cancel": "ביטול"
+    },
+    "actions": {
+      "manageClasses": "נהל כיתות",
+      "finishManage": "סיים ניהול",
+      "addClass": "הוסף כיתה"
+    },
+    "validations": {
+      "classLength": "שם הכיתה חייב להיות 5 אותיות או יותר",
+      "locationLength": "מיקום חייב להיות 5 אותיות או יותר",
+      "groupLinkRequired": "לינק לקבוצה נחוץ",
+      "dateRequired": "תאריך נחוץ",
+      "teacherRequired": "מדריך נחוץ",
+      "matnasRequired": "מתנס נחוץ",
+      "cityRequired": "עיר נחוצה"
+    }
+  },
+  "studentsPage": {
+    "filters": {
+      "matnas": "Matnas",
+      "matnasPlaceholder": "בחר מטנות",
+      "school": "בית ספר",
+      "schoolPlaceholder": "בחר בית ספר",
+      "city": "עיר",
+      "cityPlaceholder": "בחר עיר",
+      "searchPlaceholder": "הזן שם"
+    },
+    "buttons": {
+      "addStudent": "הוסף תלמיד",
+      "deleteStudent": "מחק תלמיד",
+      "allStudents": "כל התלמידים",
+      "changePhoto": "שנה תמונה"
+    },
+    "form": {
+      "fullNamePlaceholder": "שם מלא",
+      "cityPlaceholder": "עיר",
+      "schoolPlaceholder": "בית ספר",
+      "matnasPlaceholder": "Matnas",
+      "idPlaceholder": "מספר זיהוי",
+      "phoneNumberPlaceholder": "מספר טלפון",
+      "emailPlaceholder": "אימייל",
+      "whatsAppLinkPlaceholder": "קישור WhatsApp",
+      "submit": "הוסף תלמיד"
+    },
+    "notification": {
+      "studentAdded": "תלמיד נוסף"
+    },
+    "validations": {
+      "cityRequired": "עיר היא שדה חובה",
+      "fullNameRequired": "שם מלא הוא שדה חובה",
+      "schoolRequired": "בית ספר הוא שדה חובה",
+      "matnasRequired": "Matnas נדרש",
+      "IDRequired": "ID נדרש",
+      "emailRequired": "דרוש אימייל",
+      "phoneRequired": "מספר טלפון הוא שדה חובה"
+    }
+  },
+  "studentsItem": {
+    "notification": {
+      "studentRemoved": "התלמיד הוסר",
+      "goingDeleteStudentNotification": "אתה עומד להסיר"
+    }
+  },
+  "studentDetail": {
+    "notification": {
+      "studentUpdated": "תלמיד עודכן"
+    },
+    "modal": {
+      "title": "להוסיף הערה",
+      "newNotePlaceholder": "טקסט הערה יהיה כאן",
+      "submit": "להוסיף הערה"
+    },
+    "block": {
+      "notes": "הערות",
+      "attendancy": "נוכחות",
+      "student": "תלמיד",
+      "files": "קבצים"
+    },
+    "buttons": {
+      "changePhoto": "שנה תמונה",
+      "addNote": "הוסף הערה",
+      "backButton": "חזרה לסטודנטים"
+    },
+    "form": {
+      "fullNamePlaceholder": "שם מלא",
+      "cityPlaceholder": "עיר",
+      "schoolPlaceholder": "בית ספר",
+      "matnasPlaceholder": "Matnas",
+      "idPlaceholder": "מספר זיהוי",
+      "phoneNumberPlaceholder": "מספר טלפון",
+      "emailPlaceholder": "אימייל",
+      "whatsAppLinkPlaceholder": "קישור WhatsApp",
+      "submit": "החל",
+      "cancel": "ביטול",
+      "fullNameField": "שם",
+      "cityField": "עיר",
+      "schoolField": "בית ספר",
+      "matnasField": "Matnas",
+      "idField": "ID",
+      "phoneNumberField": "טלפון",
+      "emailField": "אימייל",
+      "whatsAppLinkField": "WhatsApp"
+    },
+    "validations": {
+      "cityRequired": "עיר היא שדה חובה",
+      "fullNameRequired": "שם מלא הוא שדה חובה",
+      "schoolRequired": "בית ספר הוא שדה חובה",
+      "matnasRequired": "Matnas נדרש",
+      "IDRequired": "ID נדרש",
+      "emailRequired": "דרוש אימייל",
+      "phoneRequired": "מספר טלפון הוא שדה חובה"
+    },
+    "filters": {
+      "searchPlaceholder": "הזן שם כיתה",
+      "classes": "כיתות"
+    }
+  },
+  "studentClassItem": {
+    "additionalInformation": "מידע נוסף",
+    "chooseAnotherTeacher": "בחר מורה אחר",
+    "arrived": "הגיע",
+    "notification": {
+      "classRemoved": "הכיתה הוסרה",
+      "goingDeleteClassNotification": "אתה עומד להסיר"
+    }
+  },
+  "teachersPage": {
+    "form": {
+      "searchPlaceholder": "הכנס שם",
+      "fullNamePlaceholder": "שם מלא",
+      "phoneNumberPlaceholder": "מספר טלפון",
+      "emailPlaceholder": "אימייל",
+      "passwordPlaceholder": "סיסמה",
+      "confirmPasswordPlaceholder": "אשר סיסמה"
+    },
+    "actions": {
+      "addTeacher": "הוסף מורה",
+      "addPhoto": "הוסף תמונה"
+    },
+    "text": {
+      "allTeachers": "כל המורים",
+      "classes": "שיעורים"
+    }
+  },
+  "classesDashboardPage": {
+    "text": {
+      "back": "חזרה לשיעורים"
+    },
+    "form": {
+      "nameLabel": "שֵׁם",
+      "locationLabel": "מקום",
+      "timeLabel": "זְמַן",
+      "groupChatLabel": "צ'אט קבוצתי"
+    }
+  }
+}

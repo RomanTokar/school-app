@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.file {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 10px;
+
+  &:not(:first-child) {
+    padding-top: 10px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  &Info {
+    padding: 20px 0;
+  }
+
+  &Actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Image {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: rgba(66, 72, 88, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &Desc {
+    white-space: break-spaces;
+    color: $font-color-base;
+    margin-top: 10px;
+    text-align: right;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.downloadBtn {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  z-index: 999;
+}

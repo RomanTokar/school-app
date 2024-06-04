@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.button {
+  border-color: $primary;
+  padding: 14px 24px;
+  height: auto;
+  color: $font-color-base;
+  font-size: $font-size-sm;
+  line-height: 20px;
+  border-radius: $border-radius-sm;
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  &Filled {
+    background-color: $primary;
+  }
+}

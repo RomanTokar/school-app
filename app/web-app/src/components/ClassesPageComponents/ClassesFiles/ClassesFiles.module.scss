@@ -1,0 +1,77 @@
+@import "../../../variables.scss";
+
+.title {
+  color: $font-color-base;
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.files {
+  width: 100%;
+  &Wrapper {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-lg;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.modal {
+  padding: 50px 0;
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+  }
+
+  &Datepicker {
+    margin-top: 10px;
+  }
+
+  &Actions {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &Actions {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Title {
+    color: $font-color-base;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.dropzone {
+  max-width: 100%;
+  &Uploaded {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  &FileName {
+    word-break: break-all;
+    padding-right: 10px;
+    color: $font-color-base;
+  }
+}

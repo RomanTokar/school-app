@@ -1,0 +1,11 @@
+# Ignore Editors
+.idea
+.vscode
+
+
+# Local dev files and folders
+node_modules
+dist
+build
+
+.DS_Store

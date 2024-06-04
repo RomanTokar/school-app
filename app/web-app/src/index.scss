@@ -1,0 +1,253 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "./variables.scss";
+
+body {
+  font-size: $font-size-sm;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background-color: $bg-main;
+  position: relative;
+  color: $font-color-base;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(100px);
+  height: 100vh;
+  opacity: 1;
+  z-index: -1;
+  overflow: hidden;
+
+  @media (min-width: $desktop) {
+    opacity: 0.2;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $primary;
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: $border-radius-full;
+    @media (min-width: $desktop) {
+      top: -300px;
+      right: -300px;
+      width: 1500px;
+      height: 1500px;
+      left: auto;
+      transform: none;
+    }
+  }
+}
+
+.mantine-Modal-content {
+  background: $bg-popup;
+  border-radius: $border-radius-lg;
+  backdrop-filter: blur(150px);
+  overflow-y: visible;
+}
+
+.mantine-Modal-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mantine-DatePickerInput-input {
+  background-color: transparent;
+  border: none;
+  color: $font-color-base;
+  border-radius: $border-radius-sm;
+  padding: 0;
+  text-align: right;
+  font-size: $font-size-xs;
+}
+
+.mantine-Popover-dropdown {
+  background-color: $bg-popup;
+  border-radius: $border-radius-lg;
+  border: 1px solid $border-color;
+  color: $font-color-base;
+  z-index: 999;
+}
+
+.mantine-DatePickerInput-day,
+.mantine-CalendarHeader-calendarHeaderControl,
+.mantine-DatePickerInput-pickerControl,
+.mantine-Day-day {
+  color: $font-color-base;
+
+  &[data-in-range="true"],
+  &[data-first-in-range="true"],
+  &[data-selected="true"] {
+    color: $font-color-base;
+    background: $primary;
+    box-shadow: 0px 0px 8px 1px rgba(32, 100, 203, 0.8);
+    border-radius: $border-radius-full;
+  }
+
+  &:hover {
+    color: $font-color-base;
+    background: $primary;
+    box-shadow: 0px 0px 8px 1px rgba(32, 100, 203, 0.8);
+    border-radius: $border-radius-full;
+  }
+}
+
+.mantine-DatePickerInput-calendarHeaderControl {
+  border-radius: $border-radius-sm;
+}
+
+.mantine-DatePickerInput-calendarHeaderLevel {
+  color: $font-color-base;
+
+  &:hover {
+    color: $font-color-menu;
+  }
+}
+
+.mantine-Select-input {
+  background-color: transparent;
+  border: 1px solid $font-color-base;
+  border-radius: $border-radius-sm;
+  font-family: inherit;
+  text-align: right;
+  color: $font-color-base;
+  padding: 12px 20px;
+  height: 44px;
+
+  &:focus {
+    border-color: $font-color-base;
+  }
+}
+
+.mantine-Select-rightSection {
+  right: auto;
+  left: 0;
+}
+
+.mantine-Select-dropdown {
+  background-color: $bg-popup;
+  color: $font-color-base;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+}
+
+.mantine-Select-item {
+  color: $font-color-base;
+  border-radius: $border-radius-sm;
+
+  &:hover {
+    color: $font-color-menu;
+  }
+}
+
+.mantine-TimeInput-input {
+  background-color: transparent;
+  border: none;
+  color: $font-color-base;
+}
+
+.mantine-TimeInput-input {
+  padding: 0;
+}
+
+.mantine-Calendar-day,
+.mantine-Calendar-pickerControl {
+  border: 1px solid rgba(66, 72, 88, 0.5);
+  color: $font-color-base;
+  border-radius: 10px;
+
+  &:hover {
+    border-radius: $border-radius-full;
+    background: $primary;
+    box-shadow: 0px 0px 8px 1px rgba(32, 100, 203, 0.8);
+  }
+}
+
+.mantine-Calendar-month,
+.mantine-Calendar-yearsList,
+.mantine-MonthsList-monthsList {
+  border-spacing: 4px;
+  border-collapse: separate;
+
+  @media (min-width: $desktop) {
+    border-spacing: 8px;
+  }
+}
+
+.mantine-Calendar-calendarHeaderLevel {
+  color: $font-color-base;
+
+  &:hover {
+    color: $font-color-menu;
+  }
+}
+
+.mantine-Calendar-calendarHeader {
+  max-width: 100%;
+}
+
+.mantine-Textarea-input {
+  background: $bg-popup;
+  border-radius: $border-radius-sm;
+  padding: 12px 20px;
+  text-align: right;
+  color: $font-color-base;
+}
+
+.mantine-Checkbox-label {
+  color: $font-color-base;
+}
+
+.mantine-Checkbox-input {
+  background: $bg-popup;
+  &:checked {
+    border-color: $font-color-base;
+  }
+}
+
+.mantine-Select-dropdown div {
+  width: 100%;
+}
+
+.mantine-Select-dropdown {
+  z-index: 100;
+}
+
+.mantine-Dropzone-root {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+
+  &:hover {
+    background: $primary;
+  }
+
+  & span {
+    font-size: $font-size-sm;
+    color: $font-color-base;
+    font-weight: 700;
+  }
+}

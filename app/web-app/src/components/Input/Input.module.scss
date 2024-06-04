@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.input {
+  & input {
+    background-color: transparent;
+    border: 1px solid $font-color-base;
+    border-radius: $border-radius-sm;
+    font-family: inherit;
+    text-align: right;
+    color: $font-color-base;
+    padding: 12px 20px;
+    height: 44px;
+
+    &:focus {
+      border: 1px solid $font-color-base;
+    }
+
+    &::placeholder {
+      font-size: $font-size-sm;
+      line-height: 28px;
+      color: $font-color-secondary;
+    }
+  }
+}

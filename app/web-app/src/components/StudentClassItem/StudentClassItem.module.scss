@@ -1,0 +1,151 @@
+@import "../../variables.scss";
+
+.class {
+  background-color: $bg-secondary;
+  border: 1px solid $border-color;
+  padding: 15px 22px;
+  backdrop-filter: blur(150px);
+  border-radius: $border-radius-lg;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  button {
+    border: 1px solid $btn-secondary;
+    align-self: flex-start;
+  }
+
+  &Wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &Top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &Bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 30px;
+    gap: 20px;
+    @media (min-width: $desktop) {
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+  }
+
+  &Name {
+    font-size: $font-size-sm;
+    color: $font-color-base;
+    line-height: 20px;
+    text-align: end;
+    width: 100%;
+  }
+
+  &Classes {
+    color: $font-color-secondary;
+    font-size: $font-size-sm;
+    line-height: 20px;
+
+    &Wrap {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 10px;
+      flex-direction: column-reverse;
+      align-self: flex-end;
+      gap: 7px;
+
+      div {
+        display: flex;
+      }
+      @media (min-width: $desktop) {
+        gap: 16px;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &Right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 15px;
+    div {
+      margin: 4px 0;
+    }
+    @media (min-width: $desktop) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.icon {
+  max-width: 24px;
+  margin-right: 4px;
+  &Block {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.info {
+  &Checkboxes {
+    display: flex;
+    gap: 20px;
+  }
+  &Block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    @media (min-width: $desktop) {
+      width: 444px;
+    }
+    &Teachers {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+
+      button {
+        align-self: flex-end;
+      }
+    }
+    &Title {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      text-align: end;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    &Body {
+      display: inline-flex;
+      width: 100%;
+      height: 140px;
+      padding: 20px;
+      justify-content: flex-end;
+      flex-shrink: 0;
+      border-radius: 40px;
+      border: 1px solid $border-color;
+      backdrop-filter: blur(150px);
+    }
+  }
+}
+
+.open {
+  @media (min-width: $desktop) {
+    background-image: url("../../assets/images/abstract_student_class.svg");
+    background-repeat: no-repeat;
+  }
+}

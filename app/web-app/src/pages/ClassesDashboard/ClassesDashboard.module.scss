@@ -1,0 +1,179 @@
+@import "../../variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 50px;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.page {
+  @media (min-width: $desktop) {
+    background: url("../../assets/images/abstract3.svg") no-repeat;
+    background-position: bottom right;
+  }
+}
+
+.title {
+  color: $font-color-base;
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.topBar {
+  margin-bottom: 20px;
+  &Btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.leftColumn {
+  width: 100%;
+  padding: 50px 10px;
+  border-radius: $border-radius-lg;
+  backdrop-filter: blur(150px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: url("../../assets/images/abstract4.svg"), $bg-secondary;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  @media (min-width: $desktop) {
+    width: 444px;
+    padding: 60px 20px;
+  }
+}
+
+.centerColumn {
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    width: 444px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.rightColumn {
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    width: 444px;
+  }
+}
+
+.wrapperInner {
+  background-color: $bg-secondary;
+  border-radius: $border-radius-lg;
+  padding: 60px 20px;
+  margin-top: 20px;
+}
+
+.class {
+  background-color: $bg-secondary;
+  border-radius: $border-radius-lg;
+  padding: 60px 20px;
+  &Heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+
+  &Body {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &Row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Label {
+    color: $font-color-secondary;
+    font-size: $font-size-sm;
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &Btns {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.modal {
+  padding: 50px 10px;
+
+  &Header {
+    text-transform: uppercase;
+    color: $font-color-base;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+}
+
+.dates {
+  color: $font-color-base;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
+
+  &Time {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &Part {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      & span {
+        font-size: $font-size-sm;
+        color: $font-color-secondary;
+      }
+    }
+  }
+
+  &Date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    & span {
+      font-size: $font-size-sm;
+      color: $font-color-secondary;
+    }
+  }
+}

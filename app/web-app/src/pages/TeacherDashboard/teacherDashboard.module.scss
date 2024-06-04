@@ -1,0 +1,63 @@
+@import "../../variables.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 50px;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.title {
+  color: $font-color-base;
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.leftColumn,
+.section {
+  width: 100%;
+  background-color: $bg-secondary;
+  padding: 50px 10px;
+  border-radius: $border-radius-lg;
+  backdrop-filter: blur(150px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (min-width: $desktop) {
+    width: 444px;
+    padding: 60px 20px;
+  }
+}
+
+.centerColumn {
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    width: 444px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.section {
+  background: url("../../assets/images/abstract2.svg") no-repeat, $bg-secondary;
+  background-position: right 130%;
+  padding: 50px 10px 110px;
+  border-radius: $border-radius-lg;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 100px;
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-position: right 120%;
+  }
+}

@@ -1,0 +1,116 @@
+@import "../../variables.scss";
+
+.reminds {
+  margin-top: 20px;
+  width: 100%;
+  backdrop-filter: blur(150px);
+  background: rgba(42, 43, 48, 0.4);
+  padding: 50px 10px;
+  border-radius: $border-radius-lg;
+
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+  }
+
+  &List {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    max-height: 158px;
+    overflow-y: auto;
+    border: 1px solid $border-color;
+    padding: 20px;
+    border-radius: $border-radius-lg;
+  }
+
+  &Item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+    gap: 15px;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+
+    &Text {
+      max-width: 245px;
+      font-size: $font-size-sm;
+      color: $font-color-base;
+
+      @media (min-width: $desktop) {
+        max-width: 330px;
+      }
+    }
+
+    &Close {
+      cursor: pointer;
+    }
+  }
+}
+
+.title {
+  text-align: right;
+  color: $font-color-base;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.modal {
+  padding: 50px 0;
+
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+  }
+
+  &Head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: 20px;
+    flex-direction: column-reverse;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &Actions {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.dates {
+  display: flex;
+  gap: 20px;
+
+  &Time {
+    display: flex;
+    align-items: center;
+    color: $font-color-base;
+  }
+
+  &Date {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $font-color-base;
+
+    & > span {
+      font-weight: 700;
+    }
+  }
+}

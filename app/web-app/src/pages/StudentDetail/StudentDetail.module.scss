@@ -1,0 +1,372 @@
+@import "../../variables.scss";
+
+.pageWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: $desktop) {
+    margin-left: 0;
+    margin-right: 0;
+    background-image: url("../../assets/images/abstract_students.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.student {
+  &Wrapper {
+    color: $font-color-base;
+  }
+  &Row {
+    display: grid;
+    grid-gap: 10px;
+    grid-row-gap: 30px;
+    justify-items: center;
+
+    @media (min-width: 928px) and (max-width: 1439px) {
+      grid-template-columns: repeat(2, minmax(330px, 1fr));
+    }
+
+    @media (min-width: 1440px) {
+      grid-row-gap: 40px;
+      grid-template-columns: repeat(3, minmax(444px, 1fr));
+    }
+
+    @media (max-width: 927px) {
+      grid-template-columns: minmax(330px, 1fr);
+      & > div:nth-child(1) {
+        grid-row-start: 3;
+        grid-row-end: 3;
+      }
+      & > div:nth-child(3) {
+        grid-row-start: 1;
+        grid-row-end: 1;
+      }
+    }
+  }
+
+  &Profile {
+    background-image: url("../../assets/images/abstract_profile_mobile.svg");
+    background-repeat: no-repeat;
+    @media (min-width: $desktop) {
+      background-image: url("../../assets/images/abstract_profile_desktop.svg");
+    }
+  }
+
+  &Block {
+    width: 330px;
+    min-width: 330px;
+    max-width: 440px;
+    min-height: 464px;
+    border-radius: 40px;
+    border: 1px solid white;
+    backdrop-filter: blur(150px);
+    padding: 30px 20px;
+    @media (min-width: 500px) and (max-width: 927px) {
+      width: 444px;
+    }
+    @media (min-width: 1010px) and (max-width: 1439px) {
+      width: 444px;
+    }
+    @media (min-width: 1440px) {
+      min-width: 444px;
+      padding: 20px 10px;
+    }
+
+    &Title {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 700;
+      height: 68px;
+      text-transform: uppercase;
+
+      &Button button {
+        display: flex;
+        justify-content: flex-end;
+        width: fit-content;
+        border: transparent;
+        padding-right: 0;
+        padding-left: 0;
+        font-size: 16px;
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+
+    &Wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      @media (min-width: 1440px) {
+        min-width: 444px;
+        padding: 20px 10px;
+        &:nth-child(4) {
+          grid-column-start: 3;
+          grid-column-end: 3;
+        }
+      }
+    }
+  }
+}
+
+.notes {
+  &Wrapper {
+    border-radius: 40px;
+    padding: 20px;
+    border: 1px solid $border-color;
+    max-height: 336px;
+    overflow: scroll;
+    margin-bottom: 20px;
+  }
+  &Item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &Time {
+      margin-top: 5px;
+      font-size: $font-size-xs;
+      color: $font-color-secondary;
+    }
+
+    & img {
+      cursor: pointer;
+    }
+  }
+}
+
+.profile {
+  &Row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    span:last-child {
+      color: $font-color-secondary;
+    }
+  }
+  &Buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &Wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &ChangeButton {
+    margin-bottom: 5px;
+    &:hover {
+      color: $font-color-secondary;
+    }
+  }
+
+  &DeleteButton:hover {
+    color: $font-color-error;
+  }
+
+  &Content {
+    text-align: center;
+    color: white;
+  }
+}
+
+.classes {
+  &Header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 5px;
+    span {
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    @media (min-width: $desktop) {
+      gap: 16px;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &Search {
+    max-width: 100%;
+    margin-left: auto;
+    margin-bottom: 40px;
+
+    @media (min-width: $desktop) {
+      max-width: 300px;
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.modal {
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+  }
+
+  &Head {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    color: $font-color-base;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &Actions {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.whatsAppLink {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.backbutton {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  color: $font-color-base;
+  text-decoration: none;
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    margin-left: 34px;
+  }
+
+  &Icon {
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $border-color;
+    &:hover {
+      background-color: $font-color-secondary;
+    }
+  }
+}
+
+.diagram {
+  margin-top: 40px;
+  border-radius: $border-radius-lg;
+  border: 1px solid $border-color;
+  background: transparent;
+  padding: 30px 10px;
+
+  @media (min-width: $desktop) {
+    padding: 32px 26px;
+  }
+
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &Head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &Item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: $font-color-base;
+    }
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px;
+    gap: 15px;
+    max-width: 150px;
+
+    @media (min-width: $desktop) {
+      max-width: 100%;
+    }
+
+    &Item {
+      width: 100%;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      color: $font-color-base;
+      justify-content: center;
+    }
+  }
+}

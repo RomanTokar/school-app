@@ -1,0 +1,58 @@
+@import "../../../variables.scss";
+
+.title {
+  color: $font-color-base;
+  text-align: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.diagram {
+  margin-top: 20px;
+  border-radius: $border-radius-lg;
+  border: 1px solid $border-color;
+  background: transparent;
+  padding: 30px 10px;
+
+  @media (min-width: $desktop) {
+    padding: 32px 20px;
+  }
+
+  &Head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &Item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: $font-color-base;
+    }
+  }
+
+  &Inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px;
+    gap: 15px;
+    max-width: 150px;
+
+    @media (min-width: $desktop) {
+      max-width: 100%;
+    }
+
+    &Item {
+      width: 100%;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      color: $font-color-base;
+      justify-content: center;
+    }
+  }
+}

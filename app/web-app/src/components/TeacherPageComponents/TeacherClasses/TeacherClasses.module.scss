@@ -1,0 +1,26 @@
+@import "../../../variables.scss";
+
+.title {
+  text-align: right;
+  color: $font-color-base;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.classes {
+  &List {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &Action {
+    margin-top: 20px;
+    padding-right: 55px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

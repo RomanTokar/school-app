@@ -1,0 +1,60 @@
+@import "../../../variables.scss";
+
+.plans {
+  width: 100%;
+  padding: 50px 10px;
+  border-radius: $border-radius-lg;
+  background: url("../../../assets/images/abstract_plans.svg"), $primary;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+
+  @media (min-width: $desktop) {
+    width: 444px;
+    padding: 60px 20px;
+  }
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  &Item {
+    border: 1px solid $font-color-base;
+    border-radius: $border-radius-lg;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Number {
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius-full;
+    background: $warning;
+    filter: drop-shadow(0px 0px 8px rgba(255, 207, 85, 0.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $font-color-base;
+    font-weight: 700;
+  }
+
+  &Name {
+    color: $font-color-base;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.title {
+  text-align: right;
+  color: $font-color-base;
+  font-weight: 700;
+  line-height: 19px;
+  text-transform: uppercase;
+}

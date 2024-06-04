@@ -1,0 +1,19 @@
+@import "../../../variables.scss";
+
+.wrapper {
+  padding: 50px 10px;
+  background: $bg-secondary;
+  border-radius: $border-radius-lg;
+  margin-top: 20px;
+
+  @media (min-width: $desktop) {
+    padding: 60px 20px;
+  }
+}
+
+.title {
+  color: $font-color-base;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+}
