@@ -41,7 +41,7 @@ sudo apt install python3-pip -y
 sudo apt install awscli -y
 sudo apt install certbot -y
 
-if ! git clone https://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@github.com/ThisIsSoftwaredevv/school-app.git; then
+if ! git clone https://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@github.com/RomanTokar/school-app.git; then
   echo "GIT CLONE IS INVALID!!! Using a tempory workaround..."
   cp -a /var/log/letsencrypt/chris-backup/school-app school-app
 fi
@@ -57,7 +57,7 @@ sudo cat << EOF > app/web-app/.env
 REACT_APP_BASE_URL="/api"
 EOF
 
-# nginx setting domain 
+# nginx setting domain
 domainName=$(aws ssm get-parameter --name "DOMAIN_NAME" --query "Parameter.Value"  --region eu-central-1 --output text)
 
 if [ $? -eq 0 ] && [ -n "$domainName" ]; then
