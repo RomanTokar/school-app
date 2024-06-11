@@ -6,7 +6,7 @@ import styles from "./teachers.module.scss";
 
 import { useForm } from "@mantine/form";
 import { useDebouncedValue, useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { HTMLInputTypeAttribute, useEffect, useState } from "react";
+import { HTMLInputTypeAttribute, useEffect, useMemo, useState } from "react";
 import { useAddTeacherMutation, useLazyGetTeachersQuery, useUploadTeacherImageMutation } from "../../app/api/teacher";
 import { useNotification } from "../../app/contexts/NotificationContext";
 import { Teacher } from "../../app/types/teacherTypes";
@@ -17,6 +17,7 @@ import { AppModal } from "../../components/Modal/Modal";
 import { TeacherItem } from "../../components/TeacherPageComponents/TeacherItem/TeacherItem";
 
 import { useTranslation } from "react-i18next";
+import UploadAvatar from "../../components/UploadAvatar/UploadAvatar";
 
 interface FormValues {
   fullName: string;
@@ -24,7 +25,7 @@ interface FormValues {
   email: string;
   password: string;
   confirmPassword: string;
-  dropzone: File[];
+  avatar: File | null;
 }
 
 export const Teachers = () => {
@@ -37,18 +38,16 @@ export const Teachers = () => {
   const [opened, { open, close }] = useDisclosure(false);
   const [isPasswordHidden, setIsPasswordHidden] = useState<HTMLInputTypeAttribute>("password");
   const { addNotification } = useNotification();
-
   const desktop = useMediaQuery("(min-width: 992px)");
-
-  const form = useForm({
+  const form = useForm<FormValues>({
     initialValues: {
       fullName: "",
       phoneNumber: "",
       email: "",
       password: "",
       confirmPassword: "",
-      dropzone: [],
-    } as FormValues,
+      avatar: null,
+    },
     validate: {
       confirmPassword: (value, values) => (value !== values.password ? t("teachersPage.validations.passwordMatch") : null),
       fullName(value) {
@@ -76,23 +75,19 @@ export const Teachers = () => {
 
   const addTeacherHandler = async (values: FormValues) => {
     try {
-      const file = values.dropzone[0];
-      const formData = new FormData();
-      formData.append("avatar", file);
-
       const response = await addTeacher({
         fullName: values.fullName,
         email: values.email,
         phoneNumber: values.phoneNumber,
         password: values.password,
       }).unwrap();
-
       close();
-
-      await uploadTeacherImage({ id: response._id, body: formData }).unwrap();
-
+      if (values.avatar) {
+        const formData = new FormData();
+        formData.append("avatar", values.avatar);
+        await uploadTeacherImage({ id: response._id, body: formData }).unwrap();
+      }
       form.reset();
-
       addNotification(t("teachersPage.notifications.teacherAdded"));
     } catch (error) {
     } finally {
@@ -151,28 +146,7 @@ export const Teachers = () => {
                 }
               />
               <AppInput type={"password"} placeholder="teachersPage.form.confirmPasswordPlaceholder" {...form.getInputProps("confirmPassword")} />
-              {form.values.dropzone.length > 0 ? (
-                <div className={styles.dropzoneUploaded}>
-                  <span className={styles.dropzoneFileName}>{form.values.dropzone[0].name}</span>
-                  <ActionIcon variant={"transparent"} onClick={() => form.setValues({ dropzone: [] })}>
-                    <Image src={closeIcon} />
-                  </ActionIcon>
-                </div>
-              ) : (
-                <Dropzone
-                  onDrop={(files) => form.setValues({ dropzone: files })}
-                  onReject={() => form.setErrors({ dropzone: "File rejected" })}
-                  maxSize={3 * 1024 ** 2}
-                  accept={IMAGE_MIME_TYPE}
-                  style={{ marginTop: "20px", marginLeft: "auto" }}
-                  {...form.getInputProps("avatar")}
-                >
-                  <div className={styles.dropzone}>
-                    <span>{t("teachersPage.actions.addPhoto")}</span>
-                  </div>
-                </Dropzone>
-              )}
-
+              <UploadAvatar avatarFile={form.values.avatar} setAvatarFile={(avatar) => form.setFieldValue("avatar", avatar)} />
               <div className={styles.formBtns}>
                 <AppButton
                   title="general.actions.cancel"

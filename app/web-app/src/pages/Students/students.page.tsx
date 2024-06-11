@@ -1,7 +1,7 @@
-import { Avatar, Container, Image } from "@mantine/core";
+import { Container, Image } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { useDebouncedValue, useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useGetCityQuery, useGetMatnasQuery } from "../../app/api/classes";
 import { useGetSchoolsQuery } from "../../app/api/schools";
@@ -17,6 +17,7 @@ import { Notification } from "../../components/Notification/notification";
 import { AppSelect } from "../../components/Select/Select";
 import { StudentItem } from "../../components/StudentItem/StudentItem";
 import styles from "./students.module.scss";
+import UploadAvatar from "../../components/UploadAvatar/UploadAvatar";
 
 export const Students = () => {
   const { t } = useTranslation();
@@ -32,8 +33,7 @@ export const Students = () => {
   const [addStudent] = useAddStudentMutation();
   const [isTeacherAdded, setIsStudentAdded] = useState<boolean>(false);
   const desktop = useMediaQuery("(min-width: 992px)");
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [preview, setPreview] = useState<any>(null);
+  const [avatarFile, setAvatarFile] = useState<File | null>(null);
 
   const form = useForm({
     initialValues: {
@@ -57,22 +57,27 @@ export const Students = () => {
           return t("studentsPage.validations.cityRequired");
         }
       },
-      // school(value) {
-      //   if (!value) {
-      //     return t("studentsPage.validations.schoolRequired");
-      //   }
-      // },
-      // matnas(value) {
-      //   if (!value) {
-      //     return t("studentsPage.validations.matnasRequired");
-      //   }
-      // },
+      school(value) {
+        if (!value) {
+          return t("studentsPage.validations.schoolRequired");
+        }
+      },
+      matnas(value) {
+        if (!value) {
+          return t("studentsPage.validations.matnasRequired");
+        }
+      },
       email(value) {
         if (!value) {
           return t("studentsPage.validations.emailRequired");
         }
       },
       phoneNumber(value) {
+        if (!value) {
+          return t("studentsPage.validations.phoneRequired");
+        }
+      },
+      WhatsAppLink(value) {
         if (!value) {
           return t("studentsPage.validations.phoneRequired");
         }
@@ -87,11 +92,6 @@ export const Students = () => {
   useEffect(() => {
     getStudents({ fullName: debounced, city: filters.city, school: filters.school, matnas: filters.matnas });
   }, [filters]);
-
-  const handleFileChange = async (event: any) => {
-    const file = event.target.files[0];
-    setPreview(file);
-  };
 
   const addStudentHandler = async (values: AddStudent) => {
     try {
@@ -109,9 +109,9 @@ export const Students = () => {
       form.reset();
       close();
 
-      if (preview) {
+      if (avatarFile) {
         const formData = new FormData();
-        formData.append("avatar", preview);
+        formData.append("avatar", avatarFile);
         try {
           if (response?._id) {
             await updateStudentAvatar({
@@ -129,12 +129,6 @@ export const Students = () => {
       setTimeout(() => {
         setIsStudentAdded(false);
       }, 3000);
-    }
-  };
-
-  const handleClickOverlay = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
     }
   };
 
@@ -230,37 +224,14 @@ export const Students = () => {
                 <AppInput type={"number"} placeholder={t("studentsPage.form.phoneNumberPlaceholder")} {...form.getInputProps("phoneNumber")} />
                 <AppInput placeholder={t("studentsPage.form.emailPlaceholder")} {...form.getInputProps("email")} />
                 <AppInput placeholder={t("studentsPage.form.whatsAppLinkPlaceholder")} {...form.getInputProps("WhatsAppLink")} />
-                <div className={styles.avatarWrapper}>
-                  {preview ? (
-                    <Avatar src={URL?.createObjectURL(preview)} radius={120} className={styles.avatar} />
-                  ) : (
-                    <div className={styles.avatar} />
-                  )}
-                  <div className={styles.overlay}>
-                    <div className={styles.overlayContent}>
-                      {preview ? (
-                        ""
-                      ) : (
-                        <div onClick={handleClickOverlay} className={styles.overlayChangeButton}>
-                          {t("studentsPage.buttons.changePhoto")}
-                        </div>
-                      )}
-                      {preview && (
-                        <div onClick={() => setPreview(null)} className={styles.overlayDeleteButton}>
-                          {t("general.actions.delete")}
-                        </div>
-                      )}
-                      <input ref={fileInputRef} type="file" accept="image/*" onChange={handleFileChange} style={{ display: "none" }} />
-                    </div>
-                  </div>
-                </div>
+                <UploadAvatar avatarFile={avatarFile} setAvatarFile={setAvatarFile} />
                 <div className={styles.formBtns}>
                   <AppButton
                     title={t("general.actions.cancel")}
                     variant={"outline"}
                     onClick={() => {
                       close();
-                      setPreview(null);
+                      setAvatarFile(null);
                     }}
                   />
                   <AppButton title={t("studentsPage.form.submit")} variant={"filled"} type={"submit"} />

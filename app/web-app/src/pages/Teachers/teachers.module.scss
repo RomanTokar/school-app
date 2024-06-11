@@ -65,18 +65,3 @@
     justify-content: space-between;
   }
 }
-
-.dropzone {
-  max-width: 100%;
-  &Uploaded {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-  &FileName {
-    word-break: break-all;
-    padding-right: 10px;
-    color: $font-color-base;
-  }
-}

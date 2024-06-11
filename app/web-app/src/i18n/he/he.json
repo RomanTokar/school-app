@@ -271,9 +271,9 @@
       "fullNameRequired": "שם מלא הוא שדה חובה",
       "schoolRequired": "בית ספר הוא שדה חובה",
       "matnasRequired": "Matnas נדרש",
-      "IDRequired": "ID נדרש",
       "emailRequired": "דרוש אימייל",
-      "phoneRequired": "מספר טלפון הוא שדה חובה"
+      "phoneRequired": "מספר טלפון הוא שדה חובה",
+      "whatsappRequired": "יש צורך בוואטסאפ"
     }
   },
   "studentsItem": {

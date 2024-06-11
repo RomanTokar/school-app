@@ -271,9 +271,9 @@
       "fullNameRequired": "Full name is required",
       "schoolRequired": "School is required",
       "matnasRequired": "Matnas is required",
-      "IDRequired": "ID is required",
       "emailRequired": "Email is required",
-      "phoneRequired": "Phone number  is required"
+      "phoneRequired": "Phone number is required",
+      "whatsappRequired": "WhatsApp is required"
     }
   },
   "studentsItem": {
