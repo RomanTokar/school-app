@@ -231,6 +231,8 @@
       "locationLength": "Location should be at least 5 characters long",
       "groupLinkRequired": "Group link is required",
       "dateRequired": "Date is required",
+      "startTimeRequired": "Start time is required",
+      "endTimeRequired": "End time is required",
       "teacherRequired": "Teacher is required",
       "matnasRequired": "Matnas is required",
       "cityRequired": "City is required"
@@ -364,7 +366,9 @@
     },
     "validations": {
       "photo": "Please add photo",
-      "passwordMatch": "Passwords did not match"
+      "passwordMatch": "Passwords did not match",
+      "passwordRequired": "Password is required",
+      "confirmPasswordRequired": "Confirm password is required"
     },
     "notifications": {
       "teacherAdded": "Teacher has been added"

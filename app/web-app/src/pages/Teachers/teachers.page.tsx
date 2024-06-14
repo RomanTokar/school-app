@@ -1,16 +1,14 @@
-import { ActionIcon, Container, Image } from "@mantine/core";
-import { Dropzone, IMAGE_MIME_TYPE } from "@mantine/dropzone";
+import { Container, Image } from "@mantine/core";
 import { AppButton } from "../../components/Button/Button";
 import { AppInput } from "../../components/Input/Input";
 import styles from "./teachers.module.scss";
 
 import { useForm } from "@mantine/form";
 import { useDebouncedValue, useDisclosure, useMediaQuery } from "@mantine/hooks";
-import { HTMLInputTypeAttribute, useEffect, useMemo, useState } from "react";
+import { HTMLInputTypeAttribute, useEffect, useState } from "react";
 import { useAddTeacherMutation, useLazyGetTeachersQuery, useUploadTeacherImageMutation } from "../../app/api/teacher";
 import { useNotification } from "../../app/contexts/NotificationContext";
 import { Teacher } from "../../app/types/teacherTypes";
-import closeIcon from "../../assets/icons/close-menu.svg";
 import eyeIcon from "../../assets/icons/eye.svg";
 import plusIcon from "../../assets/icons/plus.svg";
 import { AppModal } from "../../components/Modal/Modal";
@@ -49,7 +47,17 @@ export const Teachers = () => {
       avatar: null,
     },
     validate: {
-      confirmPassword: (value, values) => (value !== values.password ? t("teachersPage.validations.passwordMatch") : null),
+      confirmPassword: (value, values) => {
+        if (!value) {
+          return t("teachersPage.validations.confirmPasswordRequired");
+        }
+        return value !== values.password ? t("teachersPage.validations.passwordMatch") : null;
+      },
+      password: (value) => {
+        if (!value) {
+          return t("teachersPage.validations.passwordRequired");
+        }
+      },
       fullName(value) {
         if (value.length < 5) {
           return t("studentDetail.validations.fullNameRequired");

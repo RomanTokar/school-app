@@ -45,7 +45,7 @@ export const ClassesNotes = () => {
     validate: {
       text: (value) => {
         if (value.trim().length < 5) {
-          return "components.teacherNotes.validation.note";
+          return t("components.teacherNotes.validation.note");
         }
       },
     },
@@ -153,7 +153,7 @@ export const ClassesNotes = () => {
           </div>
           <div className={styles.modalBody}>
             <form onSubmit={form.onSubmit((values) => setNoteHandler(values))} className={styles.form}>
-              <Textarea placeholder={`${t("components.classesNotes.form.textarea")}`} autosize minRows={4} {...form.getInputProps("text")} />
+              <Textarea placeholder={t("components.classesNotes.form.textarea")} autosize minRows={4} {...form.getInputProps("text")} />
               <div className={styles.modalActions}>
                 <AppButton variant={"outline"} title={"general.actions.cancel"} onClick={close} />
                 <AppButton variant={"filled"} type={"submit"} title={"components.classesNotes.actions.addNote"} />

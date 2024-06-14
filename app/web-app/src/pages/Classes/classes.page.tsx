@@ -2,7 +2,7 @@ import { Checkbox, Container, Image } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import dayjs from "dayjs";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useAddClassMutation, useGetCityQuery, useGetMatnasQuery } from "../../app/api/classes";
 import { useGetTeachersQuery } from "../../app/api/teacher";
@@ -45,7 +45,6 @@ export const AppClasses = () => {
   const [addClass] = useAddClassMutation();
   const [isChangeable, setIsChangeable] = useState<boolean>(false);
   const [date, setDate] = useState<[Date | null, Date | null]>([new Date(), nextweek()]);
-  const [choosedDate, setChoosedDate] = useState<string | null>();
   const [addModalOpened, { open: openAddModal, close: closeAddModal }] = useDisclosure(false);
   const desktop = useMediaQuery("(min-width: 992px)");
 
@@ -107,6 +106,16 @@ export const AppClasses = () => {
           return t("classesPage.validations.cityRequired");
         }
       },
+      startTime(value) {
+        if (!value) {
+          return t("classesPage.validations.startTimeRequired");
+        }
+      },
+      endTime(value) {
+        if (!value) {
+          return t("classesPage.validations.endTimeRequired");
+        }
+      },
     },
     transformValues: (values: FormValues) => ({
       startDate: dayjs(`${values.date}T${values.startTime}`).toISOString(),
@@ -158,12 +167,6 @@ export const AppClasses = () => {
 
     return weekDates;
   };
-
-  useEffect(() => {
-    if (choosedDate) {
-      form.setValues({ date: choosedDate });
-    }
-  }, [choosedDate]);
 
   return (
     <Container size={"xl"}>
@@ -227,7 +230,12 @@ export const AppClasses = () => {
                   {...form.getInputProps("teacherId")}
                 />
               )}
-              <AppSelect data={getWeekdays()} placeholder={t("classesPage.form.datePlaceholder")} onChange={(value) => setChoosedDate(value)} />
+              <AppSelect
+                {...form.getInputProps("date")}
+                data={getWeekdays()}
+                placeholder={t("classesPage.form.datePlaceholder")}
+                onChange={(value) => form.setValues({ date: value || undefined })}
+              />
               <div className={styles.dates}>
                 <div className={styles.datesTime}>
                   <div className={styles.datesTimePart}>

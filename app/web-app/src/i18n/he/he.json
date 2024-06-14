@@ -231,6 +231,8 @@
       "locationLength": "מיקום חייב להיות 5 אותיות או יותר",
       "groupLinkRequired": "לינק לקבוצה נחוץ",
       "dateRequired": "תאריך נחוץ",
+      "startTimeRequired": "נדרשת שעת התחלה",
+      "endTimeRequired": "נדרשת שעת סיום",
       "teacherRequired": "מדריך נחוץ",
       "matnasRequired": "מתנס נחוץ",
       "cityRequired": "עיר נחוצה"
@@ -361,6 +363,11 @@
     "text": {
       "allTeachers": "כל המורים",
       "classes": "שיעורים"
+    },
+    "validations": {
+      "passwordMatch": "הסיסמאות לא התאימו",
+      "passwordRequired": "דרושה סיסמא",
+      "confirmPasswordRequired": "אשר נדרשת סיסמה"
     }
   },
   "classesDashboardPage": {
